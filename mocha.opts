@@ -1,5 +1,6 @@
---compilers ts-node/register
---require source-map-support/register
---full-trace
---bail
-./**/*.test.ts
+--require ts-node/register
+--timeout 50000
+--exit
+
+test/*.spec.ts 
+test/**/*.spec.ts

@@ -1,27 +1,37 @@
 {
-    "include": [
-      "./src/*.ts"
-    ],
-    "exclude": [
-      "./**/*.test.ts"
-    ],
-    "extension": [
-      ".ts"
-    ],
-    "require": [
-      "ts-node/register"
-    ],
-    "reporter": [
-    "text-summary",
+  "check-coverage": true,
+  "per-file": true,
+  "lines": 70,
+  "statements": 70,
+  "functions": 70,
+  "branches": 70,
+  "include": [
+    "src/*.ts",
+    "src/**/*.ts"
+  ],
+  "extension": [
+    ".ts"
+  ],
+  "exclude": [
+    "test/*.spec.ts",
+    "test/**/*.spec.ts"
+  ],
+  "reporter": [
     "lcov",
+    "text-summary",
     "text",
     "json",
-    "cobertura"
-    ],
-    "watermarks": {
+    "html"
+  ],
+  "watermarks": {
       "lines": [90, 100],
       "functions": [90, 100],
       "branches": [90, 100],
       "statements": [90, 100]
-    }
+  },
+  "require": [
+    "ts-node/register"
+  ],
+  "cache": true,
+  "all": true
 }
